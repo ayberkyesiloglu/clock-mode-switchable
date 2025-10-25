@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Clock - Digital & Analog (M: mode, T: theme)</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="wrap" id="app">
+    <div class="card" role="region" aria-label="Saat uygulaması">
+      <div class="controls" aria-hidden="false">
+        <button class="btn" id="toggleModeBtn" title="M - Dijital / Analog değiştir">Mode: <strong id="modeLabel">Digital</strong></button>
+        <button class="btn secondary" id="toggleThemeBtn" title="T - Tema değiştir">Theme: <strong id="themeLabel">Dark</strong></button>
+      </div>
+
+      <!-- Dijital -->
+      <div class="digital show" id="digital">
+        <div class="time" id="digitalTime">00:00:00 <span class="ampm" id="ampm">ÖÖ</span></div>
+        <div class="date" id="dateStr">1 Ocak 1970</div>
+      </div>
+
+      <!-- Analog -->
+      <div class="analog" id="analog" aria-hidden="true">
+        <div class="clock-face" id="clockFace" aria-hidden="true">
+          <div class="marks" id="marks"></div>
+
+          <div class="hand hour" id="hourHand" aria-hidden="true"></div>
+          <div class="hand minute" id="minuteHand" aria-hidden="true"></div>
+          <div class="hand second" id="secondHand" aria-hidden="true"></div>
+
+          <div class="center-dot" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="hint" id="hint">
+        Keys: <strong>M</strong> — Change Mode (Digital - Analog) • <strong>T</strong> — Change Theme • Also you can change preferences with buttons.
+      </div>
+    </div>
+  </div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
